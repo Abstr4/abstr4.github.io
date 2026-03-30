@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matias Margaritini - Full Stack Developer</title>
+    <meta name="description" content="Full Stack Developer building high-performance web applications. 6+ years of experience in the entire development lifecycle.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="logo">MM</a>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-nav">
+        <div class="mobile-nav-links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="fade-in">Full Stack Developer for Scalable Web Applications</h1>
+                    <p class="fade-in stagger-1">Building high-performance applications from database to pixel-perfect interfaces. 6+ years crafting solutions that scale.</p>
+                    <div class="hero-cta fade-in stagger-2">
+                        <a href="#work" class="btn btn-primary">
+                            View My Work
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Selected Work</h2>
+                    <p>Projects showcasing full-stack capabilities and scalable architecture.</p>
+                </div>
+                <div class="work-grid">
+                    <article class="work-card">
+                        <div class="work-image">
+                            <img src="https://picsum.photos/800/500?random=1" alt="E-commerce Platform" loading="lazy">
+                        </div>
+                        <div class="work-content">
+                            <div class="work-tags">
+                                <span class="work-tag">React</span>
+                                <span class="work-tag">Node.js</span>
+                                <span class="work-tag">PostgreSQL</span>
+                            </div>
+                            <h3>E-Commerce Platform</h3>
+                            <p>High-traffic marketplace handling 10K+ daily transactions with real-time inventory management.</p>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <div class="work-image">
+                            <img src="https://picsum.photos/800/500?random=2" alt="SaaS Dashboard" loading="lazy">
+                        </div>
+                        <div class="work-content">
+                            <div class="work-tags">
+                                <span class="work-tag">TypeScript</span>
+                                <span class="work-tag">NestJS</span>
+                                <span class="work-tag">Redis</span>
+                            </div>
+                            <h3>SaaS Analytics Dashboard</h3>
+                            <p>Real-time analytics platform with live data visualization and customizable reporting.</p>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <div class="work-image">
+                            <img src="https://picsum.photos/800/500?random=3" alt="Mobile App Backend" loading="lazy">
+                        </div>
+                        <div class="work-content">
+                            <div class="work-tags">
+                                <span class="work-tag">React Native</span>
+                                <span class="work-tag">GraphQL</span>
+                                <span class="work-tag">AWS</span>
+                            </div>
+                            <h3>Mobile App Ecosystem</h3>
+                            <p>Cross-platform mobile application with microservices backend serving 50K+ users.</p>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <div class="work-image">
+                            <img src="https://picsum.photos/800/500?random=4" alt="Enterprise System" loading="lazy">
+                        </div>
+                        <div class="work-content">
+                            <div class="work-tags">
+                                <span class="work-tag">.NET</span>
+                                <span class="work-tag">Angular</span>
+                                <span class="work-tag">MongoDB</span>
+                            </div>
+                            <h3>Enterprise Management System</h3>
+                            <p>Comprehensive ERP solution with modular architecture and seamless third-party integrations.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <span class="initials">MM</span>
+                    </div>
+                    <div class="about-content">
+                        <h2>I build applications that scale.</h2>
+                        <p>Full Stack Developer based in Córdoba, Argentina, with 6+ years of experience in the entire development lifecycle—from database architecture to pixel-perfect interfaces. I specialize in clean code, performance optimization, and delivering solutions that grow with your business.</p>
+                        <ul class="about-list">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                End-to-end development: frontend to backend, APIs to databases
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Modern tech stack: React, Node.js, TypeScript, .NET, PostgreSQL
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Cloud-native: AWS, Docker, Kubernetes, CI/CD pipelines
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Track record of shipping fast without compromising quality
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical Skills</h2>
+                    <p>A comprehensive toolkit for building modern web applications.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                            Frontend
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Tailwind</span>
+                            <span class="skill-tag">HTML5/CSS3</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                            Backend
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">NestJS</span>
+                            <span class="skill-tag">C# / .NET</span>
+                            <span class="skill-tag">Laravel</span>
+                            <span class="skill-tag">Express</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                            Databases
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">Elasticsearch</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            DevOps
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                            <span class="skill-tag">Terraform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="approach">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How I Work</h2>
+                    <p>A pragmatic approach focused on delivering results.</p>
+                </div>
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <div class="approach-number">01</div>
+                        <h3>Full-Stack Ownership</h3>
+                        <p>Whether working solo or with a team, I take ownership of features from database to UI, ensuring consistency and quality throughout.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">02</div>
+                        <h3>Ship Fast, Iterate</h3>
+                        <p>Quick iteration cycles let us validate ideas early and adjust based on real feedback rather than assumptions.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">03</div>
+                        <h3>Clean Architecture</h3>
+                        <p>Well-structured, maintainable code that scales. I build systems designed for growth, not just today's requirements.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">04</div>
+                        <h3>Performance First</h3>
+                        <p>Optimized queries, efficient rendering, and thoughtful caching. Speed isn't an afterthought—it's built in.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">05</div>
+                        <h3>Clear Communication</h3>
+                        <p>Regular updates, async demos, and documentation that actually helps. No surprises at delivery.</p>
+                    </div>
+                    <div class="approach-card">
+                        <div class="approach-number">06</div>
+                        <h3>Testing & Quality</h3>
+                        <p>CI/CD pipelines with automated tests ensure reliable deployments and catch issues before they reach production.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="clients">
+            <div class="container">
+                <div class="clients-marquee">
+                    <span class="client-logo">TechVision Solutions</span>
+                    <span class="client-logo">Innovatech</span>
+                    <span class="client-logo">CodeCrafters</span>
+                    <span class="client-logo">Startup Labs</span>
+                    <span class="client-logo">Digital Dynamics</span>
+                    <span class="client-logo">CloudFirst</span>
+                    <span class="client-logo">Nexus Software</span>
+                    <span class="client-logo">DataFlow Inc</span>
+                    <span class="client-logo">TechVision Solutions</span>
+                    <span class="client-logo">Innovatech</span>
+                    <span class="client-logo">CodeCrafters</span>
+                    <span class="client-logo">Startup Labs</span>
+                    <span class="client-logo">Digital Dynamics</span>
+                    <span class="client-logo">CloudFirst</span>
+                    <span class="client-logo">Nexus Software</span>
+                    <span class="client-logo">DataFlow Inc</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="contact">
+            <div class="contact">
+                <h2>Let's Build Something Great</h2>
+                <p>Looking for a developer who can take your project from concept to production? Let's talk.</p>
+                <div class="contact-links">
+                    <a href="mailto:matias.margaritini@gmail.com" class="contact-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        Email Me
+                    </a>
+                    <a href="https://linkedin.com/in/matiasmargaritini" target="_blank" class="contact-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        LinkedIn
+                    </a>
+                    <a href="tel:+543515526918" class="contact-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        Call Me
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Matias Margaritini. Full Stack Developer, Córdoba Argentina.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
