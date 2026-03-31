@@ -172,12 +172,8 @@ section {
 } */
 
 .section-header {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     position: relative;
-}
-
-.section-header {
-    margin-bottom: 32px;
 }
 
 .section-header h1 {
