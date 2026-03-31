@@ -593,7 +593,7 @@ footer {
     }
 
     .work-card {
-        flex: 0 0 calc(85%);
+        flex: 0 0 100%;
         max-height: calc(100vh - 240px);
     }
 

@@ -74,11 +74,11 @@ if (carousel && prevBtn && nextBtn) {
     };
 
     prevBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: -(cardWidth() * 2), behavior: 'smooth' });
+        carousel.scrollBy({ left: -carousel.clientWidth, behavior: 'smooth' });
     });
 
     nextBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: cardWidth() * 2, behavior: 'smooth' });
+        carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
     });
 
     carousel.addEventListener('scroll', updateButtons);
