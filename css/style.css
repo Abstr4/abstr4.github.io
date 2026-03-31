@@ -122,6 +122,23 @@ nav .container {
     stroke: var(--text-secondary);
 }
 
+/* Site Header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    padding: 21px 24px;
+}
+
+.site-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--text-secondary);
+    letter-spacing: -0.02em;
+}
+
 /* Section Styling */
 section {
     padding: 60px 0;
@@ -129,18 +146,11 @@ section {
 
 .section-header {
     margin-bottom: 32px;
+    position: relative;
 }
 
-.section-header .initials-sm {
-    position: absolute;
-    top: 21px;
-    left: 24px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 2rem;
-    color: var(--text-secondary);
-    letter-spacing: -0.02em;
-    z-index: 50;
+.section-header {
+    margin-bottom: 32px;
 }
 
 .section-header h1 {
@@ -163,7 +173,17 @@ section {
 
 /* Work Section Carousel */
 #work {
-    padding: 160px 24px 60px;
+    min-height: 100vh;
+    padding: 80px 24px 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+#work .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .work-carousel {
