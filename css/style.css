@@ -318,6 +318,32 @@ section {
     cursor: not-allowed;
 }
 
+/* Placeholder Project Cards */
+.work-card-placeholder {
+    border-style: dashed;
+    opacity: 0.6;
+}
+
+.work-card-placeholder:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.work-image-placeholder {
+    height: 180px;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px dashed var(--border);
+}
+
+.work-image-placeholder svg {
+    width: 48px;
+    height: 48px;
+    stroke: var(--text-muted);
+}
+
 /* About Section */
 .about-grid {
     display: grid;
