@@ -6,6 +6,7 @@
 
 # Folders
 gab/
+.opencode/
 .agents/
 resume/
 
