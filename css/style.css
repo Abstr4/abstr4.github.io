@@ -28,31 +28,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: rgba(0, 102, 255, 0.2);
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-/* Skip Link */
-.skip-link {
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 12px 24px;
-    background: var(--accent);
-    color: white;
-    border-radius: 8px;
-    font-weight: 500;
-    z-index: 1000;
-    transition: top 0.2s ease;
-}
-
-.skip-link:focus {
-    top: 16px;
-    outline: none;
 }
 
 body {
@@ -60,7 +39,7 @@ body {
     background: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -136,7 +115,7 @@ a {
     align-items: center;
     justify-content: center;
     touch-action: manipulation;
-    transition: border-color 0.2s ease, background-color 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 .theme-toggle:hover {
@@ -147,6 +126,26 @@ a {
     width: 18px;
     height: 18px;
     stroke: var(--text-secondary);
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    background: var(--accent);
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    z-index: 1000;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 16px;
+    outline: none;
 }
 
 /* Site Header */
@@ -345,82 +344,6 @@ section {
 .carousel-btn:disabled {
     opacity: 0.3;
     cursor: not-allowed;
-}
-
-/* Hero CTA Buttons */
-.hero-cta {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    margin-top: 32px;
-    flex-wrap: wrap;
-}
-
-.cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 28px;
-    border-radius: 100px;
-    font-weight: 600;
-    font-size: 0.9375rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
-    touch-action: manipulation;
-}
-
-.cta-btn svg {
-    width: 18px;
-    height: 18px;
-}
-
-.cta-primary {
-    background: var(--accent);
-    color: white;
-    border: 1px solid var(--accent);
-}
-
-.cta-primary:hover {
-    background: var(--accent-hover);
-    border-color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
-}
-
-.cta-secondary {
-    background: transparent;
-    color: var(--text-primary);
-    border: 1px solid var(--border);
-}
-
-.cta-secondary:hover {
-    border-color: var(--text-muted);
-    transform: translateY(-2px);
-}
-
-/* Placeholder Project Cards */
-.work-card-placeholder {
-    border-style: dashed;
-    opacity: 0.6;
-}
-
-.work-card-placeholder:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-.work-image-placeholder {
-    height: 180px;
-    background: var(--bg-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px dashed var(--border);
-}
-
-.work-image-placeholder svg {
-    width: 48px;
-    height: 48px;
-    stroke: var(--text-muted);
 }
 
 /* About Section */
@@ -639,37 +562,6 @@ section {
     height: 18px;
 }
 
-/* Focus States */
-:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-button:focus:not(:focus-visible),
-a:focus:not(:focus-visible) {
-    outline: none;
-}
-
-.nav-btn:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-.theme-toggle:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-.carousel-btn:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-.contact-link:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
 /* Footer */
 footer {
     padding: 40px 0;
@@ -707,23 +599,12 @@ footer {
     }
 
     #work {
-        padding-top: 20px;
+        padding-top: 60px;
         padding-bottom: 100px;
-    }
     }
 
     .work-carousel {
         gap: 8px;
-    }
-
-    .hero-cta {
-        margin-top: 24px;
-        gap: 12px;
-    }
-
-    .cta-btn {
-        padding: 12px 24px;
-        font-size: 0.875rem;
     }
 
     .work-grid {
@@ -731,7 +612,7 @@ footer {
     }
 
     .work-card {
-        flex: 0 0 100%;
+        flex: 0 0 calc(85%);
         max-height: calc(100vh - 240px);
     }
 
@@ -744,6 +625,16 @@ footer {
     .carousel-btn svg {
         width: 16px;
         height: 16px;
+    }
+
+    .hero-cta {
+        margin-top: 24px;
+        gap: 12px;
+    }
+
+    .cta-btn {
+        padding: 12px 24px;
+        font-size: 0.875rem;
     }
 
     .about-grid {
@@ -803,6 +694,101 @@ footer {
 .stagger-2 { animation-delay: 0.2s; }
 .stagger-3 { animation-delay: 0.3s; }
 .stagger-4 { animation-delay: 0.4s; }
+
+/* Hero CTA Buttons */
+.hero-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    touch-action: manipulation;
+}
+
+.cta-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.cta-primary {
+    background: var(--accent);
+    color: white;
+    border: 1px solid var(--accent);
+}
+
+.cta-primary:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
+}
+
+.cta-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}
+
+.cta-secondary:hover {
+    border-color: var(--text-muted);
+    transform: translateY(-2px);
+}
+
+/* Placeholder Project Cards */
+.work-card-placeholder {
+    border-style: dashed;
+    opacity: 0.6;
+}
+
+.work-card-placeholder:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.work-image-placeholder {
+    height: 180px;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px dashed var(--border);
+}
+
+.work-image-placeholder svg {
+    width: 48px;
+    height: 48px;
+    stroke: var(--text-muted);
+}
+
+/* Focus States */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.nav-btn:focus-visible,
+.theme-toggle:focus-visible,
+.carousel-btn:focus-visible,
+.contact-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
 
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
