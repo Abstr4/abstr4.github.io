@@ -163,7 +163,7 @@ a {
     font-size: clamp(1rem, 3vw, 1.5rem);
     color: var(--text-secondary);
     letter-spacing: -0.02em;
-    margin: 16px 0px 10px 20px;
+    margin: 24px 0px 10px 20px;
 }
 
 /*  Section Styling 
