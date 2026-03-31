@@ -459,6 +459,10 @@ section {
     border: 1px solid var(--border);
 }
 
+#approach
+{
+    padding-top: 20px;
+}
 /* Approach Section */
 .approach-grid {
     display: grid;
@@ -489,34 +493,6 @@ section {
 .approach-card p {
     color: var(--text-secondary);
     font-size: 0.9375rem;
-}
-
-/* Clients Section */
-.clients {
-    padding: 80px 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    overflow: hidden;
-}
-
-.clients-marquee {
-    display: flex;
-    gap: 64px;
-    animation: marquee 30s linear infinite;
-}
-
-.client-logo {
-    flex-shrink: 0;
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: var(--text-muted);
-    white-space: nowrap;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
 }
 
 /* Contact Section */
