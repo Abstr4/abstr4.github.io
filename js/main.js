@@ -43,12 +43,10 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('scrolled');
     }
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+});document.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const sectionId = btn.dataset.section;
+        const target = document.getElementById(sectionId);
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
         }
