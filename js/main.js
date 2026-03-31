@@ -54,3 +54,67 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+const carousel = document.querySelector('.work-grid');
+const prevBtn = document.querySelector('.carousel-prev');
+const nextBtn = document.querySelector('.carousel-next');
+
+if (carousel && prevBtn && nextBtn) {
+    const cardWidth = () => {
+        const firstCard = carousel.querySelector('.work-card');
+        if (firstCard) {
+            const style = getComputedStyle(carousel);
+            const gap = parseInt(style.gap) || 0;
+            return firstCard.offsetWidth + gap;
+        }
+        return 300;
+    };
+
+    const updateButtons = () => {
+        prevBtn.disabled = carousel.scrollLeft <= 0;
+        nextBtn.disabled = carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth - 1;
+    };
+
+    prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -(cardWidth() * 2), behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: cardWidth() * 2, behavior: 'smooth' });
+    });
+
+    carousel.addEventListener('scroll', updateButtons);
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+        carousel.style.cursor = 'grabbing';
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+        isDown = false;
+        carousel.style.cursor = 'grab';
+    });
+
+    carousel.addEventListener('mouseup', () => {
+        isDown = false;
+        carousel.style.cursor = 'grab';
+    });
+
+    carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        carousel.scrollLeft = scrollLeft - walk;
+    });
+
+    carousel.style.cursor = 'grab';
+}
