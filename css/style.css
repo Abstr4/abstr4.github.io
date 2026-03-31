@@ -161,9 +161,10 @@ a {
 .site-name {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     color: var(--text-secondary);
     letter-spacing: -0.02em;
+    margin-bottom: 8px;
 }
 
 /* Section Styling */
@@ -181,7 +182,7 @@ section {
 }
 
 .section-header h1 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     text-align: center;
@@ -344,6 +345,56 @@ section {
 .carousel-btn:disabled {
     opacity: 0.3;
     cursor: not-allowed;
+}
+
+/* Hero CTA Buttons */
+.hero-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    touch-action: manipulation;
+}
+
+.cta-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.cta-primary {
+    background: var(--accent);
+    color: white;
+    border: 1px solid var(--accent);
+}
+
+.cta-primary:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
+}
+
+.cta-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}
+
+.cta-secondary:hover {
+    border-color: var(--text-muted);
+    transform: translateY(-2px);
 }
 
 /* Placeholder Project Cards */
@@ -658,6 +709,16 @@ footer {
 
     .work-carousel {
         gap: 8px;
+    }
+
+    .hero-cta {
+        margin-top: 24px;
+        gap: 12px;
+    }
+
+    .cta-btn {
+        padding: 12px 24px;
+        font-size: 0.875rem;
     }
 
     .work-grid {
