@@ -79,6 +79,14 @@ a {
     -webkit-backdrop-filter: blur(8px);
     border-radius: 100px;
     border: 1px solid var(--border);
+    clip-path: inset(0 0 0 100%);
+    animation: unroll 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes unroll {
+    0% { clip-path: inset(0 0 0 100%); }
+    100% { clip-path: inset(0 0 0 0); }
 }
 
 [data-theme="dark"] .floating-nav {
