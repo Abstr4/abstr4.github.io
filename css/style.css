@@ -596,6 +596,7 @@ footer {
 
     .work-carousel {
         gap: 8px;
+        padding: 0 8px;
     }
 
     .work-grid {
@@ -603,7 +604,7 @@ footer {
     }
 
     .work-card {
-        flex: 0 0 calc(85%);
+        flex: 0 0 calc(100% - 96px);
         max-height: calc(100vh - 240px);
     }
 

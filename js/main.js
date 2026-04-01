@@ -73,12 +73,18 @@ if (carousel && prevBtn && nextBtn) {
         nextBtn.disabled = carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth - 1;
     };
 
+    const getScrollAmount = () => {
+        const isMobile = window.innerWidth < 768;
+        const multiplier = isMobile ? 1 : 2;
+        return cardWidth() * multiplier;
+    };
+
     prevBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: -(cardWidth() * 2), behavior: 'smooth' });
+        carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
     });
 
     nextBtn.addEventListener('click', () => {
-        carousel.scrollBy({ left: cardWidth() * 2, behavior: 'smooth' });
+        carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
     });
 
     carousel.addEventListener('scroll', updateButtons);
