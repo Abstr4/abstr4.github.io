@@ -6,7 +6,7 @@
     --text-secondary: #525252;
     --text-muted: #a3a3a3;
     --accent: #0066ff;
-    --accent-hover: #0052cc;
+    --accent-hover: #4FB7B3;
     --border: #e5e5e5;
     --shadow: rgba(0, 0, 0, 0.08);
     color-scheme: light;
@@ -108,7 +108,7 @@ a {
 }
 
 .nav-btn:hover {
-    color: var(--text-primary);
+    color: var(--accent-hover);
     background: var(--bg-secondary);
 }
 
@@ -377,7 +377,7 @@ section {
 
 .carousel-btn:hover {
     background: var(--bg-secondary);
-    border-color: var(--text-muted);
+    border-color: var(--accent-hover);
 }
 
 .carousel-btn svg {
@@ -584,7 +584,7 @@ section {
 }
 
 .contact-link:hover {
-    border-color: var(--text-muted);
+    border-color: var(--accent-hover);
     transform: translateY(-2px);
 }
 
@@ -764,7 +764,7 @@ footer {
     background: var(--accent-hover);
     border-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 8px 24px rgba(79, 183, 179, 0.3);
 }
 
 .cta-secondary {
@@ -774,7 +774,8 @@ footer {
 }
 
 .cta-secondary:hover {
-    border-color: var(--text-muted);
+    border-color: var(--accent-hover);
+    color: var(--accent-hover);
     transform: translateY(-2px);
 }
 
