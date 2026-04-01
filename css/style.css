@@ -694,7 +694,7 @@ footer {
     gap: 16px;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 64px 0px;
+    margin: 128px 0px 64px 0px;
 }
 
 .cta-btn {
