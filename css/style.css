@@ -42,7 +42,12 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
     line-height: 1.2;
@@ -195,7 +200,6 @@ section {
 }
 
 #about {
-    padding-top: 20px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -453,10 +457,10 @@ section {
     border: 1px solid var(--border);
 }
 
-#approach
-{
+#approach {
     padding-top: 20px;
 }
+
 /* Approach Section */
 .approach-grid {
     display: grid;
@@ -510,7 +514,7 @@ section {
     margin-bottom: 16px;
 }
 
-.contact > p {
+.contact>p {
     color: var(--text-secondary);
     font-size: 1.125rem;
     margin-bottom: 40px;
@@ -668,18 +672,29 @@ footer {
     }
 }
 
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
+.stagger-1 {
+    animation-delay: 0.1s;
+}
+
+.stagger-2 {
+    animation-delay: 0.2s;
+}
+
+.stagger-3 {
+    animation-delay: 0.3s;
+}
+
+.stagger-4 {
+    animation-delay: 0.4s;
+}
 
 /* Hero CTA Buttons */
 .hero-cta {
     display: flex;
     gap: 16px;
     justify-content: center;
-    margin: 128px 0px;
     flex-wrap: wrap;
+    margin: 64px 0px;
 }
 
 .cta-btn {
@@ -721,6 +736,277 @@ footer {
 .cta-secondary:hover {
     border-color: var(--text-muted);
     transform: translateY(-2px);
+}
+
+/* CTA Wrapper for Arrows */
+.cta-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 40px;
+}
+
+.sketch-arrow {
+    position: absolute;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    filter: invert(0) grayscale(100%) brightness(0.7);
+}
+
+[data-theme="dark"] .sketch-arrow {
+    filter: invert(1) brightness(1.2);
+}
+
+.sketch-arrow.arrow-1 {
+    width: 36px;
+    top: -20px;
+    left: 0px;
+    transform: rotate(135deg);
+}
+
+.sketch-arrow.arrow-2 {
+    width: 36px;
+    top: -20px;
+    right: 0px;
+    transform: rotate(225deg);
+}
+
+.sketch-arrow.arrow-3 {
+    width: 36px;
+    bottom: -20px;
+    left: 0px;
+    transform: rotate(45deg);
+}
+
+.sketch-arrow.arrow-4 {
+    width: 36px;
+    bottom: -20px;
+    right: 0px;
+    transform: rotate(-45deg);
+}
+
+.sketch-arrow.arrow-5 {
+    width: 32px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.sketch-arrow.arrow-6 {
+    width: 32px;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+.sketch-arrow.arrow-7 {
+    width: 28px;
+    top: -5px;
+    left: -35px;
+    transform: rotate(45deg);
+}
+
+.sketch-arrow.arrow-8 {
+    width: 28px;
+    bottom: -5px;
+    left: -35px;
+    transform: rotate(55deg);
+}
+
+.sketch-arrow.arrow-9 {
+    width: 36px;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.sketch-arrow.arrow-10 {
+    width: 36px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+/* Arrow hover - excited state */
+.cta-wrapper:hover .sketch-arrow {
+    animation-duration: 0.25s;
+}
+
+.cta-wrapper:hover .arrow-1 {
+    animation: arrow1 0.25s ease-in-out infinite alternate;
+}
+
+.cta-wrapper:hover .arrow-2 {
+    animation: arrow2 0.25s ease-in-out infinite alternate;
+}
+
+.cta-wrapper:hover .arrow-3 {
+    animation: arrow3 0.25s ease-in-out infinite alternate;
+}
+
+.cta-wrapper:hover .arrow-4 {
+    animation: arrow4 0.25s ease-in-out infinite alternate;
+}
+
+.cta-wrapper:hover .arrow-5 {
+    animation: arrow5 0.25s ease-in-out infinite alternate;
+}
+
+.cta-wrapper:hover .arrow-6 {
+    animation: arrow6 0.25s ease-in-out infinite alternate;
+}
+
+.cta-wrapper:hover .arrow-7 {
+    animation: arrow7 0.25s ease-in-out infinite alternate;
+}
+
+.cta-wrapper:hover .arrow-8 {
+    animation: arrow8 0.25s ease-in-out infinite alternate;
+}
+
+.cta-wrapper:hover .arrow-9 {
+    animation: arrow9 0.25s ease-in-out infinite alternate;
+}
+
+.cta-wrapper:hover .arrow-10 {
+    animation: arrow10 0.25s ease-in-out infinite alternate;
+}
+
+/* Get closer to button on hover */
+.cta-wrapper:hover .arrow-1 {
+    top: -10px;
+}
+
+.cta-wrapper:hover .arrow-2 {
+    top: -10px;
+}
+
+.cta-wrapper:hover .arrow-3 {
+    bottom: -10px;
+}
+
+.cta-wrapper:hover .arrow-4 {
+    bottom: -10px;
+}
+
+.cta-wrapper:hover .arrow-5 {
+    left: -30px;
+}
+
+.cta-wrapper:hover .arrow-6 {
+    right: -30px;
+}
+
+.cta-wrapper:hover .arrow-7 {
+    left: -25px;
+}
+
+.cta-wrapper:hover .arrow-8 {
+    left: -25px;
+}
+
+.cta-wrapper:hover .arrow-9 {
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cta-wrapper:hover .arrow-10 {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes arrow1 {
+    0% {
+        transform: rotate(135deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(135deg) translate(-3px, -3px);
+    }
+}
+
+@keyframes arrow2 {
+    0% {
+        transform: rotate(225deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(225deg) translate(3px, -3px);
+    }
+}
+
+@keyframes arrow3 {
+    0% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(45deg) translate(-3px, 3px);
+    }
+}
+
+@keyframes arrow4 {
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(-45deg) translate(3px, 3px);
+    }
+}
+
+@keyframes arrow5 {
+    0% {
+        transform: translateY(-50%) rotate(90deg) translate(0, 0);
+    }
+
+    100% {
+        transform: translateY(-50%) rotate(90deg) translate(-4px, 0);
+    }
+}
+
+@keyframes arrow6 {
+    0% {
+        transform: translateY(-50%) rotate(-180deg) translate(0, 0);
+    }
+
+    100% {
+        transform: translateY(-50%) rotate(-180deg) translate(4px, 0);
+    }
+}
+
+@keyframes arrow7 {
+    0% {
+        transform: rotate(45deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(45deg) translate(-3px, 0);
+    }
+}
+
+@keyframes arrow8 {
+    0% {
+        transform: rotate(55deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(55deg) translate(-3px, 0);
+    }
+}
+
+@keyframes arrow9 {
+    0% { transform: translateX(-50%) rotate(180deg) translate(0, 0); }
+    100% { transform: translateX(-50%) rotate(180deg) translate(0, -3px); }
+}
+
+@keyframes arrow10 {
+    0% { transform: translateX(-50%) rotate(0deg) translate(0, 0); }
+    100% { transform: translateX(-50%) rotate(0deg) translate(0, 3px); }
 }
 
 /* Placeholder Project Cards */
@@ -776,7 +1062,10 @@ a:focus:not(:focus-visible) {
         animation: none;
     }
 
-    .stagger-1, .stagger-2, .stagger-3, .stagger-4 {
+    .stagger-1,
+    .stagger-2,
+    .stagger-3,
+    .stagger-4 {
         animation-delay: 0s;
     }
 
