@@ -873,6 +873,7 @@ footer {
 /* Arrow hover - excited state */
 .cta-wrapper:hover .sketch-arrow {
     animation-duration: 0.25s;
+    filter: brightness(0) saturate(100%) invert(72%) sepia(18%) saturate(400%) hue-rotate(135deg) brightness(95%) contrast(90%);
 }
 
 .cta-wrapper:hover .arrow-1 {
