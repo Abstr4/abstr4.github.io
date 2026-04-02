@@ -1,0 +1,158 @@
+/* About Page Hero */
+.about-hero {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 24px 40px;
+}
+
+.about-hero h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.about-hero .role {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+/* About Grid */
+.about-section {
+    padding: 0 24px 80px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Photo Frame */
+.about-photo-frame {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.about-photo-frame::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border: 2px solid var(--accent-hover);
+    border-radius: 32px;
+    opacity: 0.5;
+}
+
+.about-photo-frame::after {
+    content: '';
+    position: absolute;
+    inset: -16px;
+    border: 1px solid var(--border);
+    border-radius: 40px;
+    opacity: 0.3;
+}
+
+.about-photo-frame img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+}
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.year-section {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.year-section:nth-child(1) { animation-delay: 0.1s; }
+.year-section:nth-child(2) { animation-delay: 0.2s; }
+.year-section:nth-child(3) { animation-delay: 0.3s; }
+.year-section:nth-child(4) { animation-delay: 0.4s; }
+
+.year-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: var(--accent-hover);
+}
+
+.year-section .placeholder-img {
+    width: 100%;
+    height: 200px;
+    background: var(--bg-secondary);
+    border: 2px dashed var(--border);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.year-section p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.year-section .year-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.year-highlights li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.9375rem;
+}
+
+.year-highlights li svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent-hover);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-photo-frame {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 100px 24px 32px;
+    }
+
+    .year-section .placeholder-img {
+        height: 160px;
+    }
+}
