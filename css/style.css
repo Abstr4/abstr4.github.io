@@ -257,7 +257,7 @@ section {
     scrollbar-width: none;
     min-width: 0;
 
-    padding: 20px;
+    padding: 40px 20px 20px;
     scroll-padding-left: 24px;
 }
 
@@ -269,12 +269,11 @@ section {
     border-radius: 20px;
     overflow: hidden;
     scroll-snap-align: start;
-    transition: all 0.3s ease;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease;
     display: flex;
     flex-direction: column;
     opacity: 0;
-    transform: translateY(60px);
-    animation: slideIn 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation: cardFadeIn 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 .work-card:nth-child(1) { animation-delay: 0.1s; }
@@ -283,19 +282,13 @@ section {
 .work-card:nth-child(4) { animation-delay: 0.4s; }
 .work-card:nth-child(5) { animation-delay: 0.5s; }
 
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(60px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes cardFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .work-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-12px);
     box-shadow: 0 20px 60px var(--shadow), 0 0 20px var(--accent-hover);
     border-color: var(--accent-hover);
 }
