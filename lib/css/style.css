@@ -601,6 +601,11 @@ footer .container {
     gap: 16px;
 }
 
+.footer-socials {
+    display: flex;
+    gap: 16px;
+}
+
 .footer-github {
     display: inline-flex;
     align-items: center;
@@ -614,6 +619,23 @@ footer .container {
 }
 
 .footer-github svg {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-linkedin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.footer-linkedin:hover {
+    color: var(--accent-hover);
+}
+
+.footer-linkedin svg {
     width: 24px;
     height: 24px;
 }
