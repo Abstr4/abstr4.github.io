@@ -600,6 +600,31 @@ footer {
     font-size: 0.875rem;
 }
 
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.footer-github {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.footer-github:hover {
+    color: var(--accent-hover);
+}
+
+.footer-github svg {
+    width: 24px;
+    height: 24px;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .work-card {

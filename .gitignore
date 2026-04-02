@@ -5,12 +5,14 @@
 
 
 # Folders
+tmp/
 gab/
 .opencode/
 .agents/
 resume/
 
 # Files
+github-profile-README.md
 index1.html
 AGENTS.md
 skills-lock.json
