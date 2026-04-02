@@ -113,8 +113,8 @@ a {
 }
 
 .nav-btn.active {
-    background: var(--accent);
-    color: white;
+    color: var(--accent-hover);
+    background: var(--bg-secondary);
 }
 
 .theme-toggle {
