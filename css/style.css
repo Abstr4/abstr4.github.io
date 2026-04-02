@@ -253,14 +253,12 @@ section {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    padding: 8px 0;
     -ms-overflow-style: none;
     scrollbar-width: none;
     min-width: 0;
-}
 
-.work-grid::-webkit-scrollbar {
-    display: none;
+    padding: 20px;
+    scroll-padding-left: 24px;
 }
 
 .work-card {
@@ -298,7 +296,8 @@ section {
 
 .work-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 60px var(--shadow);
+    box-shadow: 0 20px 60px var(--shadow), 0 0 20px var(--accent-hover);
+    border-color: var(--accent-hover);
 }
 
 .work-image {
