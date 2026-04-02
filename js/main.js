@@ -122,3 +122,32 @@ if (carousel && prevBtn && nextBtn) {
 
     carousel.style.cursor = 'grab';
 }
+
+// GIF play-on-hover: preload GIFs, swap on mouseenter/mouseleave
+(function() {
+    const gifImages = document.querySelectorAll('.work-image img[data-gif]');
+    if (!gifImages.length) return;
+
+    gifImages.forEach(img => {
+        const gifSrc = img.getAttribute('data-gif');
+        if (gifSrc) {
+            const preload = new Image();
+            preload.src = gifSrc;
+        }
+    });
+
+    gifImages.forEach(img => {
+        const pngSrc = img.src;
+        const gifSrc = img.getAttribute('data-gif');
+        const card = img.closest('.work-card');
+        if (!card) return;
+
+        card.addEventListener('mouseenter', () => {
+            if (gifSrc) img.src = gifSrc;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            img.src = pngSrc;
+        });
+    });
+})();
