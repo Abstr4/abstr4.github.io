@@ -23,6 +23,7 @@
 
 /* About Grid */
 .about-section {
+    margin-top: 32px;
     padding: 0 24px 80px;
 }
 
@@ -113,6 +114,12 @@
     font-weight: 500;
     color: var(--text-primary);
     margin-bottom: 12px;
+}
+
+.year-section .stack {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-style: italic;
 }
 
 .year-section .placeholder-img {
