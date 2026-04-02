@@ -1,0 +1,126 @@
+/* Work Page Hero */
+.work-hero {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 24px 60px;
+}
+
+.work-hero h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+}
+
+.work-hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+}
+
+/* Projects Grid */
+.projects-section {
+    padding: 0 24px 80px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), 
+                box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1), 
+                border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 60px var(--shadow), 0 0 20px var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+.project-image {
+    height: 65vh;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.project-content {
+    padding: 24px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.project-tag {
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+.project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 50vh;
+    }
+
+    .work-hero {
+        padding: 100px 24px 40px;
+    }
+}

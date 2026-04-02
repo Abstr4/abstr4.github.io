@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function() {
+            const saved = localStorage.getItem('theme');
+            if (saved) {
+                document.documentElement.setAttribute('data-theme', saved);
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <meta name="theme-color" content="#0066ff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+    <title>Work - Matias Margaritini</title>
+    <meta name="description" content="Projects built by Matias Margaritini - Full Stack .NET Developer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/css/base.css">
+    <link rel="stylesheet" href="lib/css/work.css">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="floating-nav">
+        <a href="index.html" class="nav-btn">Home</a>
+        <a href="work.html" class="nav-btn active">Work</a>
+        <a href="about.html" class="nav-btn">About</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
+    </div>
+
+    <main id="main-content">
+        <section class="work-hero">
+            <h1 class="fade-in">My Work</h1>
+            <p class="fade-in">Projects I've built, one line of code at a time.</p>
+        </section>
+
+        <section class="projects-section">
+            <div class="projects-grid">
+                <a href="#" class="project-card card-fade-in">
+                    <div class="project-image">
+                        <img src="lib/resources/work-cards-images/TodoSeUsaBlazor.png"
+                             data-gif="lib/resources/work-cards-images/TodoSeUsaBlazor.gif"
+                             alt="TodoSeUsa Inventory System" width="600" height="400" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">.NET</span>
+                            <span class="project-tag">Blazor Server</span>
+                            <span class="project-tag">SQL Server</span>
+                        </div>
+                        <h3>TodoSeUsa (Blazor)</h3>
+                        <p>Inventory management system for retail clothing store.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card card-fade-in">
+                    <div class="project-image">
+                        <img src="lib/resources/work-cards-images/TodoSeUsaNet7.png"
+                             data-gif="lib/resources/work-cards-images/TodoSeUsaNet7.gif"
+                             alt="TodoSeUsa .NET 7" width="600" height="400" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">.NET 7</span>
+                            <span class="project-tag">ASP.NET Core MVC</span>
+                            <span class="project-tag">SQL Server</span>
+                        </div>
+                        <h3>TodoSeUsa (.NET 7 MVC)</h3>
+                        <p>First version of the inventory management system.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card card-fade-in">
+                    <div class="project-image">
+                        <img src="lib/resources/work-cards-images/DiscordBotsSuite1.png" alt="Discord Bot Suite"
+                             width="600" height="400" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Discord.js</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                        <h3>Discord Bot Suite</h3>
+                        <p>Modular automation bots for gaming and crypto communities.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-card card-fade-in">
+                    <div class="project-image">
+                        <img src="lib/resources/work-cards-images/Portfolio.png"
+                             data-gif="lib/resources/work-cards-images/Portfolio.gif"
+                             alt="Personal Portfolio" width="600" height="400" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="project-tag">Cursor</span>
+                            <span class="project-tag">OpenCode</span>
+                            <span class="project-tag">AI Agents</span>
+                        </div>
+                        <h3>Personal Portfolio</h3>
+                        <p>This portfolio, built with AI assistance.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="https://github.com/Abstr4" target="_blank" rel="noopener noreferrer" class="footer-github" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+            </a>
+            <p>&copy; 2026 Matias Margaritini. Full Stack .NET Developer, Córdoba Argentina.</p>
+        </div>
+    </footer>
+
+    <script src="lib/js/base.js"></script>
+    <script src="lib/js/work.js"></script>
+</body>
+
+</html>
