@@ -3,9 +3,6 @@
 
 # Matias Margaritini - Full Stack .NET Developer
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-blue?style=flat-square)](https://matiasmargaritini.netlify.app)
-[![.NET](https://img.shields.io/badge/.NET-9.0-512bd4?style=flat-square&logo=.net&logoColor=white)](https://dotnet.microsoft.com)
-[![Blazor](https://img.shields.io/badge/Blazor-Server-512bd4?style=flat-square)](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/docs/Web/JavaScript)
